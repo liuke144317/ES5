@@ -47,3 +47,34 @@ var obj123 = {
     'bb':'456'
 }
 /*console.log('obj123',obj123);*/
+/*闭包：是封装对象的私有属性和私有方法*/
+function person(name){
+    var age;
+    function setAge(n){
+        age = n;
+    }
+    function getAge() {
+        return age;
+    }
+    return{
+        name:name,
+        setAge:setAge,
+        getAgeHa:getAge
+    }
+}
+/*var p1 = person("haha...")
+p1.setAge(20)
+console.log('p1:',p1);
+console.log('p1.getAge():',p1.getAgeHa());*/
+
+/*立即调用的函数表达式iife*/
+
+/*数组*/
+var arr = [
+    {a: 1},
+    [1, 2, 3],
+    function() {return true;}
+];
+console.log(arr[0])
+
+
